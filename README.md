@@ -2,7 +2,7 @@
 
 A clean, responsive single-page web resume built with HTML5, CSS3, and JavaScript, deployed on GitHub Pages.
 
-## 🚀 Live Demo
+##  Live Demo
 **[View Live Website](https://v3ravani.github.io/Exp11-Resume-Website-on-Github-Pages/)**
 
 ## 🛠️ Tech Stack
@@ -10,7 +10,7 @@ A clean, responsive single-page web resume built with HTML5, CSS3, and JavaScrip
 - **CSS3**: Modern responsive layout, CSS variables, print-ready stylesheet (`@media print`)
 - **JavaScript (Vanilla)**: Theme switcher (default light mode), active scrollspy navigation, mobile drawer, email copy action
 
-## 📂 Project Structure
+##  Project Structure
 ```text
 ├── index.html       # Resume markup
 ├── style.css        # Clean styles & theme definitions
@@ -20,7 +20,7 @@ A clean, responsive single-page web resume built with HTML5, CSS3, and JavaScrip
 └── README.md        # Project documentation
 ```
 
-## 💻 Local Setup
+##  Local Setup
 1. Clone the repository:
    ```bash
    git clone https://github.com/v3ravani/Exp11-Resume-Website-on-Github-Pages.git

@@ -10,17 +10,16 @@
    ========================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. THEME TOGGLE (DARK / LIGHT MODE)
+  // 1. THEME TOGGLE (DARK / LIGHT MODE - DEFAULT: LIGHT)
   const themeToggleBtn = document.getElementById('theme-toggle');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-  // Determine initial theme: saved preference -> system preference -> light
+  // Determine initial theme: saved preference -> default to 'light' (white mode)
   const getInitialTheme = () => {
     const savedTheme = localStorage.getItem('resume_theme');
-    if (savedTheme) {
+    if (savedTheme === 'dark' || savedTheme === 'light') {
       return savedTheme;
     }
-    return prefersDark.matches ? 'dark' : 'light';
+    return 'light'; // Always default to white mode
   };
 
   const applyTheme = (theme) => {
@@ -31,15 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Initialize theme
+  // Initialize theme (defaults to white mode)
   applyTheme(getInitialTheme());
-
-  // Listen for system theme changes if user hasn't explicitly chosen
-  prefersDark.addEventListener('change', (e) => {
-    if (!localStorage.getItem('resume_theme')) {
-      applyTheme(e.matches ? 'dark' : 'light');
-    }
-  });
 
   // Toggle on button click
   if (themeToggleBtn) {
@@ -150,3 +142,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
